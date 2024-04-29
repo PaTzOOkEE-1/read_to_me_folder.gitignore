@@ -4,3 +4,4 @@ A.I that reads out loud to the user. Its helps the user to understand what there
 Read to me is gonna be available to multiple website!
 
 #welcome world
+# pip install -U spacy
