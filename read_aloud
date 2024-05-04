@@ -1,0 +1,27 @@
+# read_aloud!
+
+ss AIReader:
+    def __init__(self, Read_Aloud):
+        self.content = Read_Aloud
+        self.engine = Read_Aloud()
+
+    def read_aloud(self):
+        self.engine.say(self.Read_ALoud)
+        self.engine.runAndWait()
+
+class NovelReader(AIReader):
+    def __init__(self, novel_text):
+        super().__init__(novel_text)
+
+class TextbookReader(AIReader):
+    def __init__(self, textbook_page):
+        super().__init__(textbook_page)
+
+#Example usage
+novel_text = "It was the best of times, it was the worst of times..."
+novel_reader = NovelReader(novel_text)
+novel_reader.read_aloud()
+
+textbook_page = "Chapter 1: Introduction to Artificial Intelligence"
+textbook_reader = TextbookReader(textbook_page)
+textbook_reader.read_aloud()
